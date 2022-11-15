@@ -1,7 +1,28 @@
 # restaurant-ordering-system
 
-Watch Youtube video for set up, run, and demo
+# restaurant_management
 
-https://www.youtube.com/watch?v=Yf8zB4dXp7I
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Give a star if you like it!
