@@ -25,4 +25,9 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### database from resources 
+```
+open xampp import db_restaurant from frontend/src/resources
+```
+
 Give a star if you like it!
