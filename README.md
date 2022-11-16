@@ -35,5 +35,9 @@ open xampp import db_restaurant from frontend/src/resources
 git clone https://github.com/OliverHelden/Restaurant-Order-Vuejs.git
 
 ```
+### admin password 
+```
+25082002
+```
 
 Give a star if you like it!
