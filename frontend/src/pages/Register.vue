@@ -129,7 +129,6 @@ export default {
 
         checkForm: function () {
             this.resetCheckErr();
-
             // Name validation - huy12420
             if (!this.registerObj.name) {
                 this.errorObj.nameErr.push("Entering a name is required");
@@ -139,7 +138,6 @@ export default {
                     this.errorObj.nameErr.push('A name can only contain letters');
                 }
             }
-
             // Email validation - huy12420 
             if (!this.registerObj.email) {
                 this.errorObj.emailErr.push("Entering a email is required");
