@@ -130,7 +130,7 @@ export default {
         checkForm: function () {
             this.resetCheckErr();
 
-            // Name validate
+            // Name validation - huy12420
             if (!this.registerObj.name) {
                 this.errorObj.nameErr.push("Entering a name is required");
             }
@@ -140,7 +140,7 @@ export default {
                 }
             }
 
-            // Email validate
+            // Email validation - huy12420 
             if (!this.registerObj.email) {
                 this.errorObj.emailErr.push("Entering a email is required");
             }
@@ -148,75 +148,7 @@ export default {
                 if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(this.registerObj.email)) {
                     this.errorObj.emailErr.push('Email must be valid');
                 }
-            }
-
-            // Pass validate
-            if (!this.registerObj.pass) {
-                this.errorObj.passErr.push('Password is required');
-            }
-            else {
-                if (!/[!@#$%^&*]/.test(this.registerObj.pass)) {
-                    this.errorObj.passErr.push('Password must contain at least 1 special character');
-                }
-
-                if (this.registerObj.pass.length < 8) {
-                    this.errorObj.passErr.push('Password must be more than or equal 8 characters');
-                }
-            }
-
-            // Confirm Pass validate
-            if (!this.registerObj.confirm) {
-                this.errorObj.confirmErr.push('Confirm password is required');
-            }
-            else {
-                if (this.registerObj.pass !== this.registerObj.confirm) {
-                    this.errorObj.confirmErr.push('Confirm password must be match with password');
-                }
-            }
-
-
-            // Phone validate
-            if (!this.registerObj.phone) {
-                this.errorObj.phoneErr.push('Entering phone number is required');
-            }
-            else {
-                if (!this.registerObj.phone.startsWith('84')) {
-                    this.errorObj.phoneErr.push('Phone numbers must start with 84');
-                }
-
-                if (this.registerObj.phone.length != 11) {
-                    this.errorObj.phoneErr.push('Phone numbers must have exactly 11 digits');
-                }
-
-                if (!/[0-9]{11}/.test(this.registerObj.phone)) {
-                    this.errorObj.phoneErr.push('Phone numbers can only contain numbers');
-                }
-            }
-
-            // Birth validate
-            if (!this.registerObj.birth) {
-                this.errorObj.birthErr.push("Entering birthday is required");
-            }
-            else {
-                let minRange = document.getElementById("uBirth").getAttribute("min");
-                let maxRange = document.getElementById("uBirth").getAttribute("max");
-                let dateMin = new Date(minRange);
-                let dateMax = new Date(maxRange);
-                let dateInput = new Date(this.registerObj.birth);
-
-                if (dateInput === "Invalid Date") {
-                    this.errorObj.birthErr.push("Invalid date input");
-                }
-
-                if (dateInput.getTime() < dateMin.getTime() || dateInput.getTime() > dateMax.getTime()) {
-                    this.errorObj.birthErr.push("Available birthday range is from pass 150 years to now");
-                }
-            }
-
-            // Gender validate
-            if (!this.registerObj.gender) {
-                this.errorObj.genderErr.push("Please select a gender");
-            }
+            }        
         },
 
         async handleSubmit(e) {

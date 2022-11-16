@@ -9,6 +9,7 @@ import Checkout from '../pages/Checkout.vue';
 import MyOrder from '../pages/MyOrder.vue';
 import Admin from '../admin/Admin.vue';
 import Dashboard from '../admin/Dashboard.vue';
+import Thanks from '../pages/Thanks.vue';
 
 
 const routes = [{
@@ -20,6 +21,11 @@ const routes = [{
         path: "/about",
         name: "About",
         component: About,
+    },
+    {
+        path: "/thanks",
+        name: "Thanks",
+        component: Thanks,
     },
 
     {
